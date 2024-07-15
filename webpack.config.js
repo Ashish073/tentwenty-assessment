@@ -45,10 +45,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "public", // Copy all files from public directory
-          to: "", // To the root of dist folder
+          from: "public",
+          to: "[name][ext]",
           globOptions: {
-            ignore: ["index.html"], // Exclude index.html from copying
+            ignore: ["**/index.html"],
           },
         },
       ],
