@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -31,12 +32,26 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "images/[hash][ext][query]",
+        },
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "public", // Copy all files from public directory
+          to: "", // To the root of dist folder
+          globOptions: {
+            ignore: ["index.html"], // Exclude index.html from copying
+          },
+        },
+      ],
     }),
   ],
   optimization: {
