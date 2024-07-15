@@ -6,6 +6,7 @@ function LandingPage() {
   return (
     <>
       <Helmet>
+        <meta charSet="utf-8" />
         <title>TenTwenty</title>
       </Helmet>
       <HeroSection />
