@@ -3,7 +3,7 @@ import ImageSlider from "../../../components/ImageSlider";
 import { Helmet } from "react-helmet-async";
 import PreviewNextView from "../../../components/PreviewNextView";
 
-const images = ["/images/img3.webp", "/images/img1.webp", "/images/img2.webp"];
+const images = ["/img3.webp", "/img1.webp", "/img2.webp"];
 
 const slideDuration = 8000;
 
