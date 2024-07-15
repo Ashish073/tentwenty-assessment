@@ -58,7 +58,7 @@ const PreviewNextView = ({
             className="next-image-button"
             onClick={handleNextClick}
             initial={{ fontSize: "1rem" }}
-            whileHover={{ fontSize: "1.3rem" }} // Scale up to 1.1 on hover
+            whileHover={{ fontSize: "1.3rem" }}
           >
             Next
           </motion.button>
@@ -79,11 +79,10 @@ const PreviewNextView = ({
                     : 0
                 ]
               }
-              duration={1.5} // Adjust duration as needed
+              duration={1.5}
               currentImageIndex={currentImageIndex}
             />
           </div>
-          {/* SVG and text overlay */}
           <motion.svg
             width="143"
             height="143"
@@ -112,7 +111,7 @@ const PreviewNextView = ({
             <div>
               <AnimatePresence initial={false}>
                 <motion.div
-                  key={currentImageIndex}
+                  key={currentImageIndex + 1}
                   initial="initial"
                   animate="animate"
                   exit="exit"
