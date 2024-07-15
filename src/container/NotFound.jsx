@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
 
 function NotFound() {
   return (
