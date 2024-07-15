@@ -215,12 +215,23 @@ html,
   }
 }
 
+@media (max-width: 1040px) {
+  .hero-text-container {
+    min-height: 65dvh;
+    max-width: 50%;
+  }
+  .next-preview-container {
+    bottom: 0 !important;
+  }
+}
+
 @media (max-width: 768px) {
   .sub-title {
     font-size: 2.875rem !important;
   }
   .hero-text-container {
     min-height: 65dvh;
+    max-width: 60%;
   }
   .secondary-section {
     margin: 70px 100px;
@@ -262,5 +273,11 @@ html,
 
   .next-preview-container {
     bottom: 0 !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text-container {
+    max-width: 45% !important;
   }
 }
