@@ -1,0 +1,266 @@
+@import "font";
+@import "./components/navbar";
+@import "./components/imageSlider";
+@import "./components/previewNextView";
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Work Sans", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  height: auto;
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden;
+  .rotating-slide-card {
+    width: 100%;
+    height: 100%;
+
+    .rotating-slide-card-img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-list {
+  height: 100vh;
+}
+
+.slick-slide {
+  transition: transform 300ms ease;
+  // width: 100% !important;
+}
+
+/* Rotate Left Slide */
+.slick-slide.slick-active:not(.slick-center) {
+  transform: rotate(-15deg) translateY(50px); /* Rotate left slide */
+  transition: transform 500ms ease;
+  height: 100%;
+}
+
+/* Rotate Right Slide */
+.slick-slide.slick-active.slick-center + .slick-active {
+  transform: rotate(15deg) translateY(50px); /* Rotate right slide */
+  transition: transform 500ms ease;
+  height: 100%;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-container {
+  color: white;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 85%;
+  width: 100%;
+  position: relative;
+}
+
+.hero-main-title {
+  font-size: 64px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.hero-sub-title {
+  font-size: 1rem;
+}
+
+.secondary-section {
+  margin: 100px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  .section-header {
+    font-size: 3.5rem;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+  }
+  p {
+    width: 60%;
+    font-size: 1.5rem;
+    color: #7a7777;
+  }
+}
+
+.image-slider-new {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.left-card,
+.center-card,
+.right-card {
+  height: 400px;
+}
+
+.card-carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  .left-card,
+  .center-card,
+  .right-card {
+    height: 600px;
+    margin: 0 30px;
+  }
+
+  .left-card {
+    transform: rotate(-10deg) translateY(40px) translateX(-60px);
+  }
+
+  .right-card {
+    transform: rotate(10deg) translateY(40px) translateX(60px);
+  }
+
+  .center-card {
+    z-index: 999;
+  }
+}
+
+.card-carousel-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  span {
+    font-size: 2.25rem;
+  }
+  p {
+    color: #7a7777;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 2.875rem !important;
+  }
+  .hero-text-container {
+    min-height: 65dvh;
+  }
+  .secondary-section {
+    margin: 70px 100px;
+    margin-bottom: 30px;
+    .section-header {
+      font-size: 1.875rem !important;
+      margin-bottom: 0 !important;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+  }
+  .left-card,
+  .center-card,
+  .right-card {
+    height: 350px !important;
+    margin: 0px !important;
+  }
+
+  .left-card {
+    transform: rotate(-10deg) translateY(20px) translateX(-60px) !important;
+  }
+
+  .right-card {
+    transform: rotate(10deg) translateY(20px) translateX(60px) !important;
+  }
+
+  .card-carousel-description {
+    span {
+      font-size: 1.5rem !important;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+  }
+  .hero-main-title {
+    font-size: 2.875rem !important;
+  }
+
+  .next-preview-container {
+    bottom: 0 !important;
+  }
+}

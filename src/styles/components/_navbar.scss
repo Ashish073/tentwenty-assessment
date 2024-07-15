@@ -1,0 +1,144 @@
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.navbar {
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+.navbar-items-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  background-color: #fff;
+  padding: 20px 10px;
+  transition: all 0.5s ease;
+  transform-origin: top;
+}
+
+.navbar-items-container.loading {
+  height: 100vh; /* Full height to cover the screen */
+  display: flex;
+  justify-content: center;
+  margin: 0 !important;
+  background-color: #fff;
+  align-items: center;
+}
+
+.navbar-items-container.loaded {
+  height: 5vh;
+  min-height: 5vh;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 1rem;
+}
+
+.nav-item {
+  margin-right: 5px;
+  font-size: 0.875rem;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 8px;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.contact-button {
+  background-color: #fff;
+  border: 1px solid black !important;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+  transition: all 300ms ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.menu-button {
+  background-color: #f9f4ee;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: none; /* Initially hide menu button */
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 10px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 8px 16px;
+}
+
+.menu-list a:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .contact-button {
+    display: block;
+    order: -1;
+    margin-left: 10px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .navbar-items-container {
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+}
