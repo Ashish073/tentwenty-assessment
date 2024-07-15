@@ -6,12 +6,9 @@ module.exports = {
     main: "./src/index.js",
   },
   output: {
-    static: {
-      directory: path.resolve(__dirname, "public"),
-    },
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
-    publicPath: "/",
+    publicPath: path.resolve(__dirname, "public"),
     clean: true,
   },
   module: {
