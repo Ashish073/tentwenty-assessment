@@ -1,4 +1,4 @@
-# Harvest Website Assessment Test
+# TenTwenty Assessment Test
 
 ## Project Overview
 
