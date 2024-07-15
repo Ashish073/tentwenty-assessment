@@ -20,9 +20,9 @@ function LandingPage() {
           </p>
         </div>
         <div className="card-carousel-container">
-          <img src="/images/sec1.webp" className="left-card" />
-          <img src="/images/sec2.webp" className="center-card" />
-          <img src="/images/sec3.webp" className="right-card" />
+          <img src="/sec1.webp" className="left-card" />
+          <img src="/sec2.webp" className="center-card" />
+          <img src="/sec3.webp" className="right-card" />
         </div>
 
         <div className="card-carousel-description">
